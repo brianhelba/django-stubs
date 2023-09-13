@@ -10,9 +10,9 @@ class Migration:
     # Django copies these 4 attributes from the class to the instance,
     # but they're practically used as ClassVar
     operations: ClassVar[Sequence[Operation]]
-    dependencies: ClassVar[list[tuple[str, str]]]
-    run_before: ClassVar[list[tuple[str, str]]]
-    replaces: ClassVar[list[tuple[str, str]]]
+    dependencies: ClassVar[Sequence[tuple[str, str]]]
+    run_before: ClassVar[Sequence[tuple[str, str]]]
+    replaces: ClassVar[Sequence[tuple[str, str]]]
     initial: ClassVar[bool | None]
     atomic: ClassVar[bool]
     name: str
